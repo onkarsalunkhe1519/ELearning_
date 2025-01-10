@@ -1,0 +1,659 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0A5DDBC-37F6-42C8-B827-0DEC43FBA870}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ELearning_Team3</RootNamespace>
+    <AssemblyName>ELearning_Team3</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44367</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Razorpay, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Razorpay.3.1.4\lib\net47\Razorpay.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
+    <Content Include="AddMasterCourse.aspx" />
+    <Content Include="AddMCQ.aspx" />
+    <Content Include="AdminAddCourse.aspx" />
+    <Content Include="AdminAddTopic.aspx" />
+    <Content Include="AdminCertificate.aspx" />
+    <Content Include="AdminDashBoard.aspx" />
+    <Content Include="AdminHelp.aspx" />
+    <Content Include="AdminMasterCourseAdd.aspx" />
+    <Content Include="AdminMCQ.aspx" />
+    <Content Include="AdminPurchases.aspx" />
+    <Content Include="AdminReviews.aspx" />
+    <Content Include="AdminViewCourses.aspx" />
+    <Content Include="assets\css\demo.css" />
+    <Content Include="assets\img\avatars\1.png" />
+    <Content Include="assets\img\avatars\5.png" />
+    <Content Include="assets\img\avatars\6.png" />
+    <Content Include="assets\img\avatars\7.png" />
+    <Content Include="assets\img\elements\1.jpg" />
+    <Content Include="assets\img\elements\11.jpg" />
+    <Content Include="assets\img\elements\12.jpg" />
+    <Content Include="assets\img\elements\13.jpg" />
+    <Content Include="assets\img\elements\17.jpg" />
+    <Content Include="assets\img\elements\18.jpg" />
+    <Content Include="assets\img\elements\19.jpg" />
+    <Content Include="assets\img\elements\2.jpg" />
+    <Content Include="assets\img\elements\20.jpg" />
+    <Content Include="assets\img\elements\3.jpg" />
+    <Content Include="assets\img\elements\4.jpg" />
+    <Content Include="assets\img\elements\5.jpg" />
+    <Content Include="assets\img\elements\7.jpg" />
+    <Content Include="assets\img\favicon\favicon.ico" />
+    <Content Include="assets\img\icons\brands\asana.png" />
+    <Content Include="assets\img\icons\brands\behance.png" />
+    <Content Include="assets\img\icons\brands\dribbble.png" />
+    <Content Include="assets\img\icons\brands\facebook.png" />
+    <Content Include="assets\img\icons\brands\github.png" />
+    <Content Include="assets\img\icons\brands\google.png" />
+    <Content Include="assets\img\icons\brands\instagram.png" />
+    <Content Include="assets\img\icons\brands\mailchimp.png" />
+    <Content Include="assets\img\icons\brands\slack.png" />
+    <Content Include="assets\img\icons\brands\twitter.png" />
+    <Content Include="assets\img\icons\unicons\cc-primary.png" />
+    <Content Include="assets\img\icons\unicons\cc-warning.png" />
+    <Content Include="assets\img\icons\unicons\chart-success.png" />
+    <Content Include="assets\img\icons\unicons\chart.png" />
+    <Content Include="assets\img\icons\unicons\paypal.png" />
+    <Content Include="assets\img\icons\unicons\wallet-info.png" />
+    <Content Include="assets\img\icons\unicons\wallet.png" />
+    <Content Include="assets\img\illustrations\girl-doing-yoga-light.png" />
+    <Content Include="assets\img\illustrations\man-with-laptop.png" />
+    <Content Include="assets\img\illustrations\page-misc-error-light.png" />
+    <Content Include="assets\img\layouts\layout-container-light.png" />
+    <Content Include="assets\img\layouts\layout-fluid-light.png" />
+    <Content Include="assets\img\layouts\layout-without-menu-light.png" />
+    <Content Include="assets\img\layouts\layout-without-navbar-light.png" />
+    <Content Include="assets\js\config.js" />
+    <Content Include="assets\js\dashboards-analytics.js" />
+    <Content Include="assets\js\extended-ui-perfect-scrollbar.js" />
+    <Content Include="assets\js\form-basic-inputs.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\pages-account-settings-account.js" />
+    <Content Include="assets\js\ui-modals.js" />
+    <Content Include="assets\js\ui-popover.js" />
+    <Content Include="assets\js\ui-toasts.js" />
+    <Content Include="assets\vendor\css\core.css" />
+    <Content Include="assets\vendor\css\pages\page-account-settings.css" />
+    <Content Include="assets\vendor\css\pages\page-auth.css" />
+    <Content Include="assets\vendor\css\pages\page-icons.css" />
+    <Content Include="assets\vendor\css\pages\page-misc.css" />
+    <Content Include="assets\vendor\css\theme-default.css" />
+    <Content Include="assets\vendor\fonts\boxicons.css" />
+    <Content Include="assets\vendor\fonts\boxicons\boxicons.svg" />
+    <Content Include="assets\vendor\js\bootstrap.js" />
+    <Content Include="assets\vendor\js\helpers.js" />
+    <Content Include="assets\vendor\js\menu.js" />
+    <Content Include="assets\vendor\libs\apex-charts\apex-charts.css" />
+    <Content Include="assets\vendor\libs\apex-charts\apexcharts.js" />
+    <Content Include="assets\vendor\libs\highlight\highlight-github.css" />
+    <Content Include="assets\vendor\libs\highlight\highlight.css" />
+    <Content Include="assets\vendor\libs\highlight\highlight.js" />
+    <Content Include="assets\vendor\libs\jquery\jquery.js" />
+    <Content Include="assets\vendor\libs\masonry\masonry.js" />
+    <Content Include="assets\vendor\libs\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="assets\vendor\libs\perfect-scrollbar\perfect-scrollbar.js" />
+    <Content Include="assets\vendor\libs\popper\popper.js" />
+    <Content Include="build-config.js" />
+    <Content Include="Certificates.aspx" />
+    <Content Include="CommunityAdmin.aspx" />
+    <Content Include="CommunityUser.aspx" />
+    <Content Include="CourseVideos.aspx" />
+    <Content Include="dist\css\core.css" />
+    <Content Include="dist\css\pages\page-account-settings.css" />
+    <Content Include="dist\css\pages\page-auth.css" />
+    <Content Include="dist\css\pages\page-icons.css" />
+    <Content Include="dist\css\pages\page-misc.css" />
+    <Content Include="dist\css\theme-default.css" />
+    <Content Include="dist\fonts\boxicons.css" />
+    <Content Include="dist\fonts\boxicons\boxicons.svg" />
+    <Content Include="dist\js\bootstrap.js" />
+    <Content Include="dist\js\helpers.js" />
+    <Content Include="dist\js\menu.js" />
+    <Content Include="dist\libs\apex-charts\apex-charts.css" />
+    <Content Include="dist\libs\apex-charts\apexcharts.js" />
+    <Content Include="dist\libs\highlight\highlight-github.css" />
+    <Content Include="dist\libs\highlight\highlight.css" />
+    <Content Include="dist\libs\highlight\highlight.js" />
+    <Content Include="dist\libs\jquery\jquery.js" />
+    <Content Include="dist\libs\masonry\masonry.js" />
+    <Content Include="dist\libs\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="dist\libs\perfect-scrollbar\perfect-scrollbar.js" />
+    <Content Include="dist\libs\popper\popper.js" />
+    <Content Include="gulpfile.js" />
+    <Content Include="HelpSupportUser.aspx" />
+    <Content Include="html\auth-forgot-password-basic.html" />
+    <Content Include="html\auth-login-basic.html" />
+    <Content Include="html\auth-register-basic.html" />
+    <Content Include="html\cards-basic.html" />
+    <Content Include="html\extended-ui-perfect-scrollbar.html" />
+    <Content Include="html\extended-ui-text-divider.html" />
+    <Content Include="html\form-layouts-horizontal.html" />
+    <Content Include="html\form-layouts-vertical.html" />
+    <Content Include="html\forms-basic-inputs.html" />
+    <Content Include="html\forms-input-groups.html" />
+    <Content Include="html\icons-boxicons.html" />
+    <Content Include="html\index.html" />
+    <Content Include="html\layouts-blank.html" />
+    <Content Include="html\layouts-container.html" />
+    <Content Include="html\layouts-fluid.html" />
+    <Content Include="html\layouts-without-menu.html" />
+    <Content Include="html\layouts-without-navbar.html" />
+    <Content Include="html\pages-account-settings-account.html" />
+    <Content Include="html\pages-account-settings-connections.html" />
+    <Content Include="html\pages-account-settings-notifications.html" />
+    <Content Include="html\pages-misc-error.html" />
+    <Content Include="html\pages-misc-under-maintenance.html" />
+    <Content Include="html\tables-basic.html" />
+    <Content Include="html\ui-accordion.html" />
+    <Content Include="html\ui-alerts.html" />
+    <Content Include="html\ui-badges.html" />
+    <Content Include="html\ui-buttons.html" />
+    <Content Include="html\ui-carousel.html" />
+    <Content Include="html\ui-collapse.html" />
+    <Content Include="html\ui-dropdowns.html" />
+    <Content Include="html\ui-footer.html" />
+    <Content Include="html\ui-list-groups.html" />
+    <Content Include="html\ui-modals.html" />
+    <Content Include="html\ui-navbar.html" />
+    <Content Include="html\ui-offcanvas.html" />
+    <Content Include="html\ui-pagination-breadcrumbs.html" />
+    <Content Include="html\ui-progress.html" />
+    <Content Include="html\ui-spinners.html" />
+    <Content Include="html\ui-tabs-pills.html" />
+    <Content Include="html\ui-toasts.html" />
+    <Content Include="html\ui-tooltips-popovers.html" />
+    <Content Include="html\ui-typography.html" />
+    <Content Include="index.html" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\helpers.js" />
+    <Content Include="js\menu.js" />
+    <Content Include="libs\apex-charts\apexcharts.js" />
+    <Content Include="libs\highlight\highlight.js" />
+    <Content Include="libs\jquery\jquery.js" />
+    <Content Include="libs\masonry\masonry.js" />
+    <Content Include="libs\perfect-scrollbar\perfect-scrollbar.js" />
+    <Content Include="libs\popper\popper.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="MyCourses.aspx" />
+    <Content Include="NotificationUser.aspx" />
+    <Content Include="PaymentSuccess.aspx" />
+    <Content Include="RazorpayCheckout.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="tasks\build.js" />
+    <Content Include="tasks\prod.js" />
+    <Content Include="UpdateUsesAdmin.aspx" />
+    <Content Include="UserAllCourses.aspx" />
+    <Content Include="UserDashboard.aspx" />
+    <Content Include="UserProfileUser.aspx" />
+    <Content Include="UserPurchase.aspx" />
+    <Content Include="ViewCart.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="webpack.config.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddMasterCourse.aspx.cs">
+      <DependentUpon>AddMasterCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddMasterCourse.aspx.designer.cs">
+      <DependentUpon>AddMasterCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddMCQ.aspx.cs">
+      <DependentUpon>AddMCQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddMCQ.aspx.designer.cs">
+      <DependentUpon>AddMCQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAddCourse.aspx.cs">
+      <DependentUpon>AdminAddCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminAddCourse.aspx.designer.cs">
+      <DependentUpon>AdminAddCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAddTopic.aspx.cs">
+      <DependentUpon>AdminAddTopic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminAddTopic.aspx.designer.cs">
+      <DependentUpon>AdminAddTopic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCertificate.aspx.cs">
+      <DependentUpon>AdminCertificate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCertificate.aspx.designer.cs">
+      <DependentUpon>AdminCertificate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashBoard.aspx.cs">
+      <DependentUpon>AdminDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashBoard.aspx.designer.cs">
+      <DependentUpon>AdminDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHelp.aspx.cs">
+      <DependentUpon>AdminHelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHelp.aspx.designer.cs">
+      <DependentUpon>AdminHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMasterCourseAdd.aspx.cs">
+      <DependentUpon>AdminMasterCourseAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMasterCourseAdd.aspx.designer.cs">
+      <DependentUpon>AdminMasterCourseAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMCQ.aspx.cs">
+      <DependentUpon>AdminMCQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMCQ.aspx.designer.cs">
+      <DependentUpon>AdminMCQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPurchases.aspx.cs">
+      <DependentUpon>AdminPurchases.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPurchases.aspx.designer.cs">
+      <DependentUpon>AdminPurchases.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminReviews.aspx.cs">
+      <DependentUpon>AdminReviews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminReviews.aspx.designer.cs">
+      <DependentUpon>AdminReviews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminViewCourses.aspx.cs">
+      <DependentUpon>AdminViewCourses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminViewCourses.aspx.designer.cs">
+      <DependentUpon>AdminViewCourses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Certificates.aspx.cs">
+      <DependentUpon>Certificates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Certificates.aspx.designer.cs">
+      <DependentUpon>Certificates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommunityAdmin.aspx.cs">
+      <DependentUpon>CommunityAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommunityAdmin.aspx.designer.cs">
+      <DependentUpon>CommunityAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommunityUser.aspx.cs">
+      <DependentUpon>CommunityUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommunityUser.aspx.designer.cs">
+      <DependentUpon>CommunityUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseVideos.aspx.cs">
+      <DependentUpon>CourseVideos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseVideos.aspx.designer.cs">
+      <DependentUpon>CourseVideos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HelpSupportUser.aspx.cs">
+      <DependentUpon>HelpSupportUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HelpSupportUser.aspx.designer.cs">
+      <DependentUpon>HelpSupportUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyCourses.aspx.cs">
+      <DependentUpon>MyCourses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyCourses.aspx.designer.cs">
+      <DependentUpon>MyCourses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationUser.aspx.cs">
+      <DependentUpon>NotificationUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NotificationUser.aspx.designer.cs">
+      <DependentUpon>NotificationUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentSuccess.aspx.cs">
+      <DependentUpon>PaymentSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentSuccess.aspx.designer.cs">
+      <DependentUpon>PaymentSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RazorpayCheckout.aspx.cs">
+      <DependentUpon>RazorpayCheckout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RazorpayCheckout.aspx.designer.cs">
+      <DependentUpon>RazorpayCheckout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateUsesAdmin.aspx.cs">
+      <DependentUpon>UpdateUsesAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateUsesAdmin.aspx.designer.cs">
+      <DependentUpon>UpdateUsesAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserAllCourses.aspx.cs">
+      <DependentUpon>UserAllCourses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAllCourses.aspx.designer.cs">
+      <DependentUpon>UserAllCourses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDashboard.aspx.cs">
+      <DependentUpon>UserDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDashboard.aspx.designer.cs">
+      <DependentUpon>UserDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfileUser.aspx.cs">
+      <DependentUpon>UserProfileUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserProfileUser.aspx.designer.cs">
+      <DependentUpon>UserProfileUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPurchase.aspx.cs">
+      <DependentUpon>UserPurchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPurchase.aspx.designer.cs">
+      <DependentUpon>UserPurchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCart.aspx.cs">
+      <DependentUpon>ViewCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewCart.aspx.designer.cs">
+      <DependentUpon>ViewCart.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.Master" />
+    <Content Include=".browserslistrc" />
+    <Content Include=".editorconfig" />
+    <Content Include=".eslintignore" />
+    <Content Include=".eslintrc.json" />
+    <Content Include=".npmrc" />
+    <Content Include=".prettierignore" />
+    <Content Include=".prettierrc.json" />
+    <Content Include="assets\vendor\fonts\boxicons\boxicons.eot" />
+    <Content Include="assets\vendor\fonts\boxicons\boxicons.ttf" />
+    <Content Include="assets\vendor\fonts\boxicons\boxicons.woff" />
+    <Content Include="assets\vendor\fonts\boxicons\boxicons.woff2" />
+    <Content Include="dist\css\core.css.map" />
+    <Content Include="dist\css\pages\page-account-settings.css.map" />
+    <Content Include="dist\css\pages\page-auth.css.map" />
+    <Content Include="dist\css\pages\page-icons.css.map" />
+    <Content Include="dist\css\pages\page-misc.css.map" />
+    <Content Include="dist\css\theme-default.css.map" />
+    <Content Include="dist\fonts\boxicons.css.map" />
+    <Content Include="dist\fonts\boxicons\boxicons.eot" />
+    <Content Include="dist\fonts\boxicons\boxicons.ttf" />
+    <Content Include="dist\fonts\boxicons\boxicons.woff" />
+    <Content Include="dist\fonts\boxicons\boxicons.woff2" />
+    <Content Include="dist\libs\apex-charts\apex-charts.css.map" />
+    <Content Include="dist\libs\highlight\highlight-github.css.map" />
+    <Content Include="dist\libs\highlight\highlight.css.map" />
+    <Content Include="dist\libs\perfect-scrollbar\perfect-scrollbar.css.map" />
+    <Content Include="fonts\boxicons.scss" />
+    <Content Include="libs\apex-charts\apex-charts.scss" />
+    <Content Include="libs\highlight\highlight-github.scss" />
+    <Content Include="libs\highlight\highlight.scss" />
+    <Content Include="libs\perfect-scrollbar\perfect-scrollbar.scss" />
+    <Content Include="package.json" />
+    <None Include="packages.config" />
+    <Content Include="User.Master" />
+    <Content Include="scss\core.scss" />
+    <Content Include="scss\pages\page-account-settings.scss" />
+    <Content Include="scss\pages\page-auth.scss" />
+    <Content Include="scss\pages\page-icons.scss" />
+    <Content Include="scss\pages\page-misc.scss" />
+    <Content Include="scss\theme-default.scss" />
+    <Content Include="scss\_bootstrap-extended.scss" />
+    <Content Include="scss\_bootstrap-extended\forms\_floating-labels.scss" />
+    <Content Include="scss\_bootstrap-extended\forms\_form-check.scss" />
+    <Content Include="scss\_bootstrap-extended\forms\_form-control.scss" />
+    <Content Include="scss\_bootstrap-extended\forms\_form-range.scss" />
+    <Content Include="scss\_bootstrap-extended\forms\_form-select.scss" />
+    <Content Include="scss\_bootstrap-extended\forms\_input-group.scss" />
+    <Content Include="scss\_bootstrap-extended\forms\_labels.scss" />
+    <Content Include="scss\_bootstrap-extended\forms\_validation.scss" />
+    <Content Include="scss\_bootstrap-extended\mixins\_alert.scss" />
+    <Content Include="scss\_bootstrap-extended\mixins\_badge.scss" />
+    <Content Include="scss\_bootstrap-extended\mixins\_buttons.scss" />
+    <Content Include="scss\_bootstrap-extended\mixins\_caret.scss" />
+    <Content Include="scss\_bootstrap-extended\mixins\_dropdown.scss" />
+    <Content Include="scss\_bootstrap-extended\mixins\_forms.scss" />
+    <Content Include="scss\_bootstrap-extended\mixins\_list-group.scss" />
+    <Content Include="scss\_bootstrap-extended\mixins\_misc.scss" />
+    <Content Include="scss\_bootstrap-extended\mixins\_navs.scss" />
+    <Content Include="scss\_bootstrap-extended\mixins\_pagination.scss" />
+    <Content Include="scss\_bootstrap-extended\mixins\_progress.scss" />
+    <Content Include="scss\_bootstrap-extended\mixins\_table-variants.scss" />
+    <Content Include="scss\_bootstrap-extended\mixins\_toasts.scss" />
+    <Content Include="scss\_bootstrap-extended\_accordion.scss" />
+    <Content Include="scss\_bootstrap-extended\_alert.scss" />
+    <Content Include="scss\_bootstrap-extended\_badge.scss" />
+    <Content Include="scss\_bootstrap-extended\_breadcrumb.scss" />
+    <Content Include="scss\_bootstrap-extended\_button-group.scss" />
+    <Content Include="scss\_bootstrap-extended\_buttons.scss" />
+    <Content Include="scss\_bootstrap-extended\_card.scss" />
+    <Content Include="scss\_bootstrap-extended\_carousel.scss" />
+    <Content Include="scss\_bootstrap-extended\_close.scss" />
+    <Content Include="scss\_bootstrap-extended\_dropdown.scss" />
+    <Content Include="scss\_bootstrap-extended\_forms.scss" />
+    <Content Include="scss\_bootstrap-extended\_functions.scss" />
+    <Content Include="scss\_bootstrap-extended\_include.scss" />
+    <Content Include="scss\_bootstrap-extended\_list-group.scss" />
+    <Content Include="scss\_bootstrap-extended\_mixins.scss" />
+    <Content Include="scss\_bootstrap-extended\_modal.scss" />
+    <Content Include="scss\_bootstrap-extended\_nav.scss" />
+    <Content Include="scss\_bootstrap-extended\_navbar.scss" />
+    <Content Include="scss\_bootstrap-extended\_offcanvas.scss" />
+    <Content Include="scss\_bootstrap-extended\_pagination.scss" />
+    <Content Include="scss\_bootstrap-extended\_popover.scss" />
+    <Content Include="scss\_bootstrap-extended\_progress.scss" />
+    <Content Include="scss\_bootstrap-extended\_reboot.scss" />
+    <Content Include="scss\_bootstrap-extended\_root.scss" />
+    <Content Include="scss\_bootstrap-extended\_spinners.scss" />
+    <Content Include="scss\_bootstrap-extended\_tables.scss" />
+    <Content Include="scss\_bootstrap-extended\_toasts.scss" />
+    <Content Include="scss\_bootstrap-extended\_tooltip.scss" />
+    <Content Include="scss\_bootstrap-extended\_type.scss" />
+    <Content Include="scss\_bootstrap-extended\_utilities-ltr.scss" />
+    <Content Include="scss\_bootstrap-extended\_utilities.scss" />
+    <Content Include="scss\_bootstrap-extended\_variables.scss" />
+    <Content Include="scss\_bootstrap.scss" />
+    <Content Include="scss\_colors.scss" />
+    <Content Include="scss\_components.scss" />
+    <Content Include="scss\_components\mixins\_app-brand.scss" />
+    <Content Include="scss\_components\mixins\_avatar.scss" />
+    <Content Include="scss\_components\mixins\_footer.scss" />
+    <Content Include="scss\_components\mixins\_menu.scss" />
+    <Content Include="scss\_components\mixins\_misc.scss" />
+    <Content Include="scss\_components\mixins\_navbar.scss" />
+    <Content Include="scss\_components\mixins\_text-divider.scss" />
+    <Content Include="scss\_components\_app-brand.scss" />
+    <Content Include="scss\_components\_avatar.scss" />
+    <Content Include="scss\_components\_base.scss" />
+    <Content Include="scss\_components\_common.scss" />
+    <Content Include="scss\_components\_footer.scss" />
+    <Content Include="scss\_components\_include.scss" />
+    <Content Include="scss\_components\_layout.scss" />
+    <Content Include="scss\_components\_menu.scss" />
+    <Content Include="scss\_components\_mixins.scss" />
+    <Content Include="scss\_components\_text-divider.scss" />
+    <Content Include="scss\_components\_variables.scss" />
+    <Content Include="scss\_custom-variables\_bootstrap-extended.scss" />
+    <Content Include="scss\_custom-variables\_components.scss" />
+    <Content Include="scss\_custom-variables\_libs.scss" />
+    <Content Include="scss\_custom-variables\_pages.scss" />
+    <Content Include="scss\_custom-variables\_support.scss" />
+    <Content Include="scss\_theme\_common.scss" />
+    <Content Include="scss\_theme\_theme.scss" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="yarn.lock" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54885</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44367/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
