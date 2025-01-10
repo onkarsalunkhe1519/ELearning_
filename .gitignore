@@ -1,0 +1,20 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/ELearning_Team3/v17/.suo
+/.vs/ELearning_Team3/v17/DocumentLayout.backup.json
+/.vs/ELearning_Team3/v17/DocumentLayout.json
+/.vs/ELearning_Team3/v17/fileList.bin
+/.vs/ELearning_Team3/config/applicationhost.config
+/.vs/ELearning_Team3/CopilotIndices/17.12.38.29086/CodeChunks.db
+/.vs/ELearning_Team3/CopilotIndices/17.12.38.29086/CodeChunks.db-shm
+/.vs/ELearning_Team3/CopilotIndices/17.12.38.29086/CodeChunks.db-wal
+/.vs/ELearning_Team3/CopilotIndices/17.12.38.29086/SemanticSymbols.db
+/.vs/ELearning_Team3/CopilotIndices/17.12.38.29086/SemanticSymbols.db-shm
+/.vs/ELearning_Team3/CopilotIndices/17.12.38.29086/SemanticSymbols.db-wal
+/.vs/ELearning_Team3/FileContentIndex/0f8d1e9d-bdd2-4098-9898-ce0061e34fc3.vsidx
+/.vs/ELearning_Team3/FileContentIndex/144d6495-3569-40ab-9cb7-25fc51ed2604.vsidx
+/.vs/ELearning_Team3/FileContentIndex/3647b48e-047d-41d6-a4d8-d11733da09f2.vsidx
+/.vs/ELearning_Team3/FileContentIndex/86f6a250-2662-49b5-b6e4-a9c4b65053fd.vsidx
+/.vs/ELearning_Team3/FileContentIndex/e06dd080-4f9a-4e17-bc17-b5283c3a59b0.vsidx
